@@ -1,5 +1,6 @@
 ﻿using HRM;
 using QLNHANSU.frmChamCong;
+using QLNHANSU.frmNhanSu;
 using QUANLYNHANSU;
 using System;
 using System.Collections.Generic;
@@ -88,6 +89,39 @@ namespace QLNHANSU
         private void btnDieuChuyen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmDieuChuyen f = new frmDieuChuyen();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void btnBangLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+
+        private void btnKhenThuong1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmKhenThuong f = new frmKhenThuong();
+            f.MdiParent= this;
+            f.Show();
+        }
+
+        private void btnKyLuat1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmKyLuat f = new frmKyLuat();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void barButtonItem11_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmChucVu f = new frmChucVu();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void barButtonItem15_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmBoPhan f = new frmBoPhan();
             f.MdiParent = this;
             f.Show();
         }

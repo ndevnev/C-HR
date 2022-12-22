@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraEditors;
+﻿using DataLayer;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,23 +9,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataLayer;
 using BusinessLayer;
 
-namespace QLNHANSU
+namespace QLNHANSU.frmNhanSu
 {
-    public partial class frmHopDong : DevExpress.XtraEditors.XtraForm
+    public partial class frmKhenThuong : DevExpress.XtraEditors.XtraForm
     {
-        public frmHopDong()
+        public frmKhenThuong()
         {
             InitializeComponent();
         }
 
-        HopDongBAL hopdong;
+        KhenThuongKyLuatBAL ktkl;
         NhanVienBAL nhanvien;
         int id;
 
-        private void show(bool kt)
+        void show(bool kt)
         {
             btnLuu.Enabled = !kt;
             btnHuy.Enabled = !kt;
@@ -36,16 +36,15 @@ namespace QLNHANSU
 
         private void reset()
         {
-            dtNgaybatdau.Value = DateTime.Now;
-            dtNgayketthuc.Value = dtNgaybatdau.Value.AddMonths(6); //them 6 thang
-            dtNgayki.Value = DateTime.Now;
-            spHesoluong.Text = "1";
-            
+            dtNgay.Value = DateTime.Now;
+            txtLydo.Text = string.Empty;
+            txtSotien.Text = string.Empty;
+
         }
 
-        private void loadData()
+        void loadData()
         {
-            gcDanhSach.DataSource = hopdong.getListFull();
+            gcDanhSach.DataSource = ktkl.getListFull("KhenThuong");
             gvDanhSach.OptionsBehavior.Editable = false;
         }
 
@@ -56,10 +55,11 @@ namespace QLNHANSU
             slkNhanvien.Properties.DisplayMember = "HOVATEN";
         }
 
-        private void frmHopDong_Load(object sender, EventArgs e)
+        private void frmKhenThuong_Load(object sender, EventArgs e)
         {
-            hopdong = new HopDongBAL();
+            ktkl = new KhenThuongKyLuatBAL();
             nhanvien = new NhanVienBAL();
+            show(true);
             loadData();
             loadNhanvien();
             splitContainer1.Panel1Collapsed = true;
@@ -82,9 +82,10 @@ namespace QLNHANSU
 
         private void btnXoa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                hopdong.Delete(id);
+                ktkl.Delete(id);
                 loadData();
             }
         }
@@ -111,33 +112,27 @@ namespace QLNHANSU
         void saveData()
         {
 
+
             if (btnThem.Enabled) //nếu btnThem bật thì thêm
             {
-                TB_HOPDONG hd = new TB_HOPDONG();
-                hd.SOHOPDONG = txtNoidung.Text;
-                hd.HESOLUONG = float.Parse(spHesoluong.EditValue.ToString());
-                hd.NGAYBATDAU = dtNgaybatdau.Value;
-                hd.NGAYKETTHUC = dtNgayketthuc.Value;
-                hd.NGAYKY = dtNgayki.Value;
-                hd.THOIHAN = cboThoihan.Text;
-                hd.LANKY = int.Parse(spLanki.EditValue.ToString());
-                hd.MANHANVIEN = int.Parse(slkNhanvien.EditValue.ToString());
-                hd.NOIDUNG = txtNoidung.Text;
-                hopdong.Add(hd);
+                TB_KHENTHUONGKYLUAT kt = new TB_KHENTHUONGKYLUAT();
+                kt.LYDO = txtLydo.Text;
+                kt.SOTIEN = int.Parse(txtSotien.Text);
+                kt.NGAY = dtNgay.Value;
+                kt.LOAI = "KhenThuong";
+                kt.MANHANVIEN = int.Parse(slkNhanvien.EditValue.ToString());
+                ktkl.Add(kt);
+
             }
             else //ngược lại thì Update
             {
-                var hd = hopdong.getItem(id);
-                hd.SOHOPDONG = txtSohopdong.Text;
-                hd.HESOLUONG = float.Parse(spHesoluong.EditValue.ToString());
-                hd.NGAYBATDAU = dtNgaybatdau.Value;
-                hd.NGAYKETTHUC = dtNgayketthuc.Value;
-                hd.NGAYKY = dtNgayki.Value;
-                hd.THOIHAN = cboThoihan.Text;
-                hd.LANKY = int.Parse(spLanki.EditValue.ToString());
-                hd.MANHANVIEN = int.Parse(slkNhanvien.EditValue.ToString());
-                hd.NOIDUNG = txtNoidung.Text;
-                hopdong.Update(hd);
+                var kt = ktkl.getItem(id);
+                kt.LYDO = txtLydo.Text;
+                kt.NGAY = dtNgay.Value;
+                kt.SOTIEN = int.Parse(txtSotien.Text);
+                kt.LOAI = "KhenThuong";
+                kt.MANHANVIEN = int.Parse(slkNhanvien.EditValue.ToString());
+                ktkl.Update(kt);
             }
         }
 
@@ -145,26 +140,15 @@ namespace QLNHANSU
         {
             if (gvDanhSach.RowCount > 0)
             {
-                splitContainer1.Panel1Collapsed = false;
-                id = int.Parse(gvDanhSach.GetFocusedRowCellValue("MAHOPDONG").ToString());
-                var hd = hopdong.getItem(id);
-                if (hd.SOHOPDONG==null)
-                {
-                    txtSohopdong.Text = "";
-                } else
-                {
-                    txtSohopdong.Text = hd.SOHOPDONG.ToString();
-                }
-                spHesoluong.Text = hd.HESOLUONG.ToString();
-                dtNgaybatdau.Value = hd.NGAYBATDAU.Value;
-                dtNgayketthuc.Value =  hd.NGAYKETTHUC.Value;
-                dtNgayki.Value = hd.NGAYKY.Value;
-                spLanki.Text = hd.LANKY.ToString();
-                cboThoihan.Text = hd.THOIHAN;
-                txtNoidung.Text = hd.NOIDUNG;
-                slkNhanvien.EditValue = hd.MANHANVIEN;
-
+                id = int.Parse(gvDanhSach.GetFocusedRowCellValue("MAKHENTHUONGKYLUAT").ToString());
+                var kt = ktkl.getItem(id);
+                slkNhanvien.EditValue = kt.MANHANVIEN;
+                txtMaktkl.Text = kt.MAKHENTHUONGKYLUAT.ToString();
+                txtLydo.Text = kt.LYDO;
+                dtNgay.Value = kt.NGAY.Value;
+                txtSotien.Text =  kt.SOTIEN.ToString();
             }
         }
+        
     }
 }

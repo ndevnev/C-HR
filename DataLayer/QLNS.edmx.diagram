@@ -9,7 +9,6 @@
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_BAOHIEM" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_BOPHAN" Width="1.5" PointX="0.75" PointY="12" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_CHUCVU" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_HOPDONG" Width="1.5" PointX="5.25" PointY="12.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_KHENTHUONGKYLUAT" Width="1.5" PointX="5.25" PointY="16.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_LOAICA" Width="1.5" PointX="6" PointY="19.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_LOAICONG" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
@@ -29,7 +28,6 @@
         <AssociationConnector Association="QUANLYNHANSUModel.FK_BAOHIEM_NHANVIEN" />
         <AssociationConnector Association="QUANLYNHANSUModel.FK_NHANVIEN_BOPHAN" />
         <AssociationConnector Association="QUANLYNHANSUModel.FK_NHANVIEN_CHUCVU" />
-        <AssociationConnector Association="QUANLYNHANSUModel.FK_HOPDONG_NHANVIEN" />
         <AssociationConnector Association="QUANLYNHANSUModel.FK_KHENTHUONGKYLUATNHANVIEN" />
         <AssociationConnector Association="QUANLYNHANSUModel.FK_NHANVIEN_PHONGBAN" />
         <AssociationConnector Association="QUANLYNHANSUModel.FK_NHANVIEN_TRINHDO" />
@@ -39,6 +37,8 @@
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_NHANVIEN_DIEUCHUYEN" Width="4.75" PointX="10.375" PointY="10.75" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_NHANVIEN_THOIVIEC" Width="4.75" PointX="12.375" PointY="0.75" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_BANGCONG_NHANVIEN_CHITIET" Width="4.75" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_HOPDONG" Width="1.5" PointX="5.25" PointY="29.75" />
+        <AssociationConnector Association="QUANLYNHANSUModel.FK_HOPDONG_NHANVIEN" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

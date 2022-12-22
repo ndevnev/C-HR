@@ -98,6 +98,18 @@
     <Compile Include="frmChamCong\frmWaitingcs.Designer.cs">
       <DependentUpon>frmWaitingcs.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmLuong\frmKhenThuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLuong\frmKhenThuong.Designer.cs">
+      <DependentUpon>frmKhenThuong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLuong\frmKyLuat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLuong\frmKyLuat.designer.cs">
+      <DependentUpon>frmKyLuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNhanSu\frmBoPhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,7 +137,7 @@
     <Compile Include="frmNhanSu\frmNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmNhanSu\frmNhanVien.Designer.cs">
+    <Compile Include="frmNhanSu\frmNhanVien.designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNhanSu\frmPhongBan.cs">
@@ -171,6 +183,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmChamCong\frmWaitingcs.resx">
       <DependentUpon>frmWaitingcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLuong\frmKhenThuong.resx">
+      <DependentUpon>frmKhenThuong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLuong\frmKyLuat.resx">
+      <DependentUpon>frmKyLuat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanSu\frmBoPhan.resx">
       <DependentUpon>frmBoPhan.cs</DependentUpon>

@@ -32,14 +32,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBangCongChiTiet));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.cbTrangThai = new System.Windows.Forms.CheckBox();
-            this.cbKhoa = new System.Windows.Forms.CheckBox();
             this.cboCTThang = new System.Windows.Forms.ComboBox();
             this.cboCTNam = new System.Windows.Forms.ComboBox();
             this.lblThang = new System.Windows.Forms.Label();
@@ -114,7 +113,8 @@
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnLuu = new DevExpress.XtraBars.BarButtonItem();
             this.btnHuy = new DevExpress.XtraBars.BarButtonItem();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.cbTrangThai = new System.Windows.Forms.CheckBox();
+            this.cbKhoa = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -168,6 +168,14 @@
             this.groupControl2.Text = "Chú thích";
             this.groupControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl2_Paint);
             // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(439, 44);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(93, 19);
+            this.labelControl7.TabIndex = 7;
+            this.labelControl7.Text = "CT: Công tác";
+            // 
             // labelControl4
             // 
             this.labelControl4.Location = new System.Drawing.Point(313, 66);
@@ -215,26 +223,6 @@
             this.labelControl1.Size = new System.Drawing.Size(57, 19);
             this.labelControl1.TabIndex = 1;
             this.labelControl1.Text = "V: Vắng";
-            // 
-            // cbTrangThai
-            // 
-            this.cbTrangThai.AutoSize = true;
-            this.cbTrangThai.Location = new System.Drawing.Point(707, 54);
-            this.cbTrangThai.Name = "cbTrangThai";
-            this.cbTrangThai.Size = new System.Drawing.Size(108, 23);
-            this.cbTrangThai.TabIndex = 9;
-            this.cbTrangThai.Text = "Trạng thái";
-            this.cbTrangThai.UseVisualStyleBackColor = true;
-            // 
-            // cbKhoa
-            // 
-            this.cbKhoa.AutoSize = true;
-            this.cbKhoa.Location = new System.Drawing.Point(579, 54);
-            this.cbKhoa.Name = "cbKhoa";
-            this.cbKhoa.Size = new System.Drawing.Size(70, 23);
-            this.cbKhoa.TabIndex = 8;
-            this.cbKhoa.Text = "Khoá";
-            this.cbKhoa.UseVisualStyleBackColor = true;
             // 
             // cboCTThang
             // 
@@ -1149,6 +1137,7 @@
             // btnIn
             // 
             this.btnIn.Caption = "In";
+            this.btnIn.Enabled = false;
             this.btnIn.Id = 6;
             this.btnIn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnIn.ImageOptions.SvgImage")));
             this.btnIn.Name = "btnIn";
@@ -1234,13 +1223,27 @@
             this.btnHuy.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnHuy.ImageOptions.SvgImage")));
             this.btnHuy.Name = "btnHuy";
             // 
-            // labelControl7
+            // cbTrangThai
             // 
-            this.labelControl7.Location = new System.Drawing.Point(439, 44);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(93, 19);
-            this.labelControl7.TabIndex = 7;
-            this.labelControl7.Text = "CT: Công tác";
+            this.cbTrangThai.AutoSize = true;
+            this.cbTrangThai.Enabled = false;
+            this.cbTrangThai.Location = new System.Drawing.Point(707, 54);
+            this.cbTrangThai.Name = "cbTrangThai";
+            this.cbTrangThai.Size = new System.Drawing.Size(108, 23);
+            this.cbTrangThai.TabIndex = 9;
+            this.cbTrangThai.Text = "Trạng thái";
+            this.cbTrangThai.UseVisualStyleBackColor = true;
+            // 
+            // cbKhoa
+            // 
+            this.cbKhoa.AutoSize = true;
+            this.cbKhoa.Enabled = false;
+            this.cbKhoa.Location = new System.Drawing.Point(579, 54);
+            this.cbKhoa.Name = "cbKhoa";
+            this.cbKhoa.Size = new System.Drawing.Size(70, 23);
+            this.cbKhoa.TabIndex = 8;
+            this.cbKhoa.Text = "Khoá";
+            this.cbKhoa.UseVisualStyleBackColor = true;
             // 
             // frmBangCongChiTiet
             // 
@@ -1284,8 +1287,6 @@
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.CheckBox cbTrangThai;
-        private System.Windows.Forms.CheckBox cbKhoa;
         private System.Windows.Forms.ComboBox cboCTThang;
         private System.Windows.Forms.ComboBox cboCTNam;
         private System.Windows.Forms.Label lblThang;
@@ -1368,5 +1369,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.LabelControl labelControl7;
+        private System.Windows.Forms.CheckBox cbTrangThai;
+        private System.Windows.Forms.CheckBox cbKhoa;
     }
 }

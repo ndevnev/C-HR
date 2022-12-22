@@ -19,11 +19,11 @@ namespace DataLayer
         {
             this.TB_BANGCONG = new HashSet<TB_BANGCONG>();
             this.TB_BAOHIEM = new HashSet<TB_BAOHIEM>();
-            this.TB_HOPDONG = new HashSet<TB_HOPDONG>();
             this.TB_KHENTHUONGKYLUAT = new HashSet<TB_KHENTHUONGKYLUAT>();
             this.TB_NHANVIENPHUCAP = new HashSet<TB_NHANVIENPHUCAP>();
             this.TB_TANGCA = new HashSet<TB_TANGCA>();
             this.TB_UNGLUONG = new HashSet<TB_UNGLUONG>();
+            this.TB_HOPDONG = new HashSet<TB_HOPDONG>();
         }
     
         public int MANHANVIEN { get; set; }
@@ -48,8 +48,6 @@ namespace DataLayer
         public virtual TB_BOPHAN TB_BOPHAN { get; set; }
         public virtual TB_CHUCVU TB_CHUCVU { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TB_HOPDONG> TB_HOPDONG { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TB_KHENTHUONGKYLUAT> TB_KHENTHUONGKYLUAT { get; set; }
         public virtual TB_PHONGBAN TB_PHONGBAN { get; set; }
         public virtual TB_TRINHDO TB_TRINHDO { get; set; }
@@ -59,5 +57,7 @@ namespace DataLayer
         public virtual ICollection<TB_TANGCA> TB_TANGCA { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TB_UNGLUONG> TB_UNGLUONG { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<TB_HOPDONG> TB_HOPDONG { get; set; }
     }
 }

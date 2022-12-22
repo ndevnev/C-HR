@@ -54,11 +54,13 @@
     <Compile Include="Common\CommonDateTimeBAL.cs" />
     <Compile Include="Common\DatabaseHelper.cs" />
     <Compile Include="DataObject\DieuChuyenDTO.cs" />
+    <Compile Include="DataObject\HOPDONGDTO.cs" />
     <Compile Include="DataObject\KhenThuong_KiLuatDTO.cs" />
     <Compile Include="DataObject\NhanVienDTO.cs" />
     <Compile Include="DataObject\NHANVIEN_DIEUCHUYEN_DTO.cs" />
     <Compile Include="DataObject\NHANVIEN_THOIVIEC_DTO.cs" />
     <Compile Include="HopDongBAL.cs" />
+    <Compile Include="KhenThuongKyLuatBAL.cs" />
     <Compile Include="KyCongBAL.cs" />
     <Compile Include="KyCongChiTietBAL.cs" />
     <Compile Include="LoaiCaBAL.cs" />

@@ -86,7 +86,6 @@
             this.dtNgaysinh = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.chkGioitinh = new System.Windows.Forms.CheckBox();
-            this.DATHOIVIEC = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).BeginInit();
@@ -338,8 +337,7 @@
             this.TenCV,
             this.TenBP,
             this.TenPB,
-            this.TenTD,
-            this.DATHOIVIEC});
+            this.TenTD});
             this.gvDanhSach.DetailHeight = 416;
             this.gvDanhSach.GridControl = this.gcDanhSach;
             this.gvDanhSach.Name = "gvDanhSach";
@@ -648,7 +646,7 @@
             // 
             // picHinhanh
             // 
-            this.picHinhanh.Image = global::QLNHANSU.Properties.Resources.no_image_baby;
+            this.picHinhanh.Image = global::QLNHANSU.Properties.Resources.del_Icon_x16;
             this.picHinhanh.Location = new System.Drawing.Point(67, 28);
             this.picHinhanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.picHinhanh.Name = "picHinhanh";
@@ -719,16 +717,6 @@
             this.chkGioitinh.TabIndex = 2;
             this.chkGioitinh.Text = "Nam";
             this.chkGioitinh.UseVisualStyleBackColor = true;
-            // 
-            // DATHOIVIEC
-            // 
-            this.DATHOIVIEC.Caption = "Đã thôi việc";
-            this.DATHOIVIEC.FieldName = "DATHOIVIEC";
-            this.DATHOIVIEC.MinWidth = 30;
-            this.DATHOIVIEC.Name = "DATHOIVIEC";
-            this.DATHOIVIEC.Visible = true;
-            this.DATHOIVIEC.VisibleIndex = 11;
-            this.DATHOIVIEC.Width = 96;
             // 
             // frmNhanVien
             // 
@@ -818,6 +806,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn TenPB;
         private DevExpress.XtraGrid.Columns.GridColumn TenTD;
         private System.Windows.Forms.Button btnChonhinh;
-        private DevExpress.XtraGrid.Columns.GridColumn DATHOIVIEC;
     }
 }

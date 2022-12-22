@@ -62,7 +62,8 @@
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 30);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 34);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -74,36 +75,41 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.gcDanhSach);
-            this.splitContainer1.Size = new System.Drawing.Size(1018, 618);
-            this.splitContainer1.SplitterDistance = 111;
+            this.splitContainer1.Size = new System.Drawing.Size(1309, 739);
+            this.splitContainer1.SplitterDistance = 132;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 6;
             // 
             // txtTenbophan
             // 
             this.txtTenbophan.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.txtTenbophan.Location = new System.Drawing.Point(146, 45);
+            this.txtTenbophan.Location = new System.Drawing.Point(188, 53);
+            this.txtTenbophan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtTenbophan.Name = "txtTenbophan";
-            this.txtTenbophan.Size = new System.Drawing.Size(229, 28);
+            this.txtTenbophan.Size = new System.Drawing.Size(293, 32);
             this.txtTenbophan.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.label1.Location = new System.Drawing.Point(33, 48);
+            this.label1.Location = new System.Drawing.Point(42, 57);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 21);
+            this.label1.Size = new System.Drawing.Size(129, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên bộ phận:";
             // 
             // gcDanhSach
             // 
             this.gcDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gcDanhSach.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gcDanhSach.Location = new System.Drawing.Point(0, 0);
             this.gcDanhSach.MainView = this.gvDanhSach;
+            this.gcDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gcDanhSach.MenuManager = this.barManager1;
             this.gcDanhSach.Name = "gcDanhSach";
-            this.gcDanhSach.Size = new System.Drawing.Size(1018, 503);
+            this.gcDanhSach.Size = new System.Drawing.Size(1309, 602);
             this.gcDanhSach.TabIndex = 0;
             this.gcDanhSach.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvDanhSach});
@@ -113,6 +119,7 @@
             this.gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.MaBP,
             this.TenBP});
+            this.gvDanhSach.DetailHeight = 416;
             this.gvDanhSach.GridControl = this.gcDanhSach;
             this.gvDanhSach.Name = "gvDanhSach";
             this.gvDanhSach.Click += new System.EventHandler(this.gvDanhSach_Click);
@@ -122,26 +129,26 @@
             this.MaBP.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.MaBP.AppearanceHeader.Options.UseFont = true;
             this.MaBP.Caption = "Mã bộ phận";
-            this.MaBP.FieldName = "MaBP";
-            this.MaBP.MaxWidth = 100;
-            this.MaBP.MinWidth = 25;
+            this.MaBP.FieldName = "MABOPHAN";
+            this.MaBP.MaxWidth = 129;
+            this.MaBP.MinWidth = 32;
             this.MaBP.Name = "MaBP";
             this.MaBP.Visible = true;
             this.MaBP.VisibleIndex = 0;
-            this.MaBP.Width = 94;
+            this.MaBP.Width = 121;
             // 
             // TenBP
             // 
             this.TenBP.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold);
             this.TenBP.AppearanceHeader.Options.UseFont = true;
             this.TenBP.Caption = "Tên bộ phận";
-            this.TenBP.FieldName = "TenBP";
-            this.TenBP.MaxWidth = 300;
-            this.TenBP.MinWidth = 25;
+            this.TenBP.FieldName = "TENBOPHAN";
+            this.TenBP.MaxWidth = 386;
+            this.TenBP.MinWidth = 32;
             this.TenBP.Name = "TenBP";
             this.TenBP.Visible = true;
             this.TenBP.VisibleIndex = 1;
-            this.TenBP.Width = 94;
+            this.TenBP.Width = 121;
             // 
             // barManager1
             // 
@@ -247,42 +254,47 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Size = new System.Drawing.Size(1018, 30);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlTop.Size = new System.Drawing.Size(1309, 34);
             // 
             // barDockControlBottom
             // 
             this.barDockControlBottom.CausesValidation = false;
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 648);
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 773);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Size = new System.Drawing.Size(1018, 20);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlBottom.Size = new System.Drawing.Size(1309, 20);
             // 
             // barDockControlLeft
             // 
             this.barDockControlLeft.CausesValidation = false;
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 34);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 618);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 739);
             // 
             // barDockControlRight
             // 
             this.barDockControlRight.CausesValidation = false;
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1018, 30);
+            this.barDockControlRight.Location = new System.Drawing.Point(1309, 34);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 618);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 739);
             // 
             // frmBoPhan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1018, 668);
+            this.ClientSize = new System.Drawing.Size(1309, 793);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.barDockControlLeft);
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmBoPhan";
             this.Text = "Bộ phận";
             this.Load += new System.EventHandler(this.frmBoPhan_Load);

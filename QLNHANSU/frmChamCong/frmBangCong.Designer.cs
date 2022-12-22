@@ -40,15 +40,13 @@
             this.btnDong = new DevExpress.XtraBars.BarButtonItem();
             this.btnIn = new DevExpress.XtraBars.BarButtonItem();
             this.btnXemBangCong = new DevExpress.XtraBars.BarButtonItem();
-            this.btnRefresh = new DevExpress.XtraBars.BarButtonItem();
             this.bar4 = new DevExpress.XtraBars.Bar();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.btnRefresh = new DevExpress.XtraBars.BarButtonItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.cbTrangThai = new System.Windows.Forms.CheckBox();
-            this.cbKhoa = new System.Windows.Forms.CheckBox();
             this.cboThang = new System.Windows.Forms.ComboBox();
             this.cboNam = new System.Windows.Forms.ComboBox();
             this.lblThang = new System.Windows.Forms.Label();
@@ -68,6 +66,8 @@
             this.barDockControl2 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl3 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl4 = new DevExpress.XtraBars.BarDockControl();
+            this.cbTrangThai = new System.Windows.Forms.CheckBox();
+            this.cbKhoa = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.barManager)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -171,6 +171,7 @@
             // btnIn
             // 
             this.btnIn.Caption = "In";
+            this.btnIn.Enabled = false;
             this.btnIn.Id = 6;
             this.btnIn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnIn.ImageOptions.SvgImage")));
             this.btnIn.Name = "btnIn";
@@ -183,13 +184,6 @@
             this.btnXemBangCong.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnXemBangCong.ImageOptions.SvgImage")));
             this.btnXemBangCong.Name = "btnXemBangCong";
             this.btnXemBangCong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnXemBangCong_ItemClick);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Caption = "Refresh";
-            this.btnRefresh.Id = 8;
-            this.btnRefresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRefresh.ImageOptions.SvgImage")));
-            this.btnRefresh.Name = "btnRefresh";
             // 
             // bar4
             // 
@@ -235,6 +229,13 @@
             this.barDockControlRight.Manager = this.barManager;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 667);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Caption = "Refresh";
+            this.btnRefresh.Id = 8;
+            this.btnRefresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRefresh.ImageOptions.SvgImage")));
+            this.btnRefresh.Name = "btnRefresh";
+            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -258,26 +259,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(1364, 667);
             this.splitContainer1.SplitterDistance = 128;
             this.splitContainer1.TabIndex = 9;
-            // 
-            // cbTrangThai
-            // 
-            this.cbTrangThai.AutoSize = true;
-            this.cbTrangThai.Location = new System.Drawing.Point(707, 54);
-            this.cbTrangThai.Name = "cbTrangThai";
-            this.cbTrangThai.Size = new System.Drawing.Size(108, 23);
-            this.cbTrangThai.TabIndex = 9;
-            this.cbTrangThai.Text = "Trạng thái";
-            this.cbTrangThai.UseVisualStyleBackColor = true;
-            // 
-            // cbKhoa
-            // 
-            this.cbKhoa.AutoSize = true;
-            this.cbKhoa.Location = new System.Drawing.Point(579, 54);
-            this.cbKhoa.Name = "cbKhoa";
-            this.cbKhoa.Size = new System.Drawing.Size(70, 23);
-            this.cbKhoa.TabIndex = 8;
-            this.cbKhoa.Text = "Khoá";
-            this.cbKhoa.UseVisualStyleBackColor = true;
             // 
             // cboThang
             // 
@@ -483,6 +464,28 @@
             this.barDockControl4.Manager = null;
             this.barDockControl4.Size = new System.Drawing.Size(1364, 0);
             // 
+            // cbTrangThai
+            // 
+            this.cbTrangThai.AutoSize = true;
+            this.cbTrangThai.Enabled = false;
+            this.cbTrangThai.Location = new System.Drawing.Point(707, 54);
+            this.cbTrangThai.Name = "cbTrangThai";
+            this.cbTrangThai.Size = new System.Drawing.Size(108, 23);
+            this.cbTrangThai.TabIndex = 9;
+            this.cbTrangThai.Text = "Trạng thái";
+            this.cbTrangThai.UseVisualStyleBackColor = true;
+            // 
+            // cbKhoa
+            // 
+            this.cbKhoa.AutoSize = true;
+            this.cbKhoa.Enabled = false;
+            this.cbKhoa.Location = new System.Drawing.Point(579, 54);
+            this.cbKhoa.Name = "cbKhoa";
+            this.cbKhoa.Size = new System.Drawing.Size(70, 23);
+            this.cbKhoa.TabIndex = 8;
+            this.cbKhoa.Text = "Khoá";
+            this.cbKhoa.UseVisualStyleBackColor = true;
+            // 
             // frmBangCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -541,8 +544,6 @@
         private System.Windows.Forms.Label lblNam;
         private System.Windows.Forms.ComboBox cboThang;
         private System.Windows.Forms.ComboBox cboNam;
-        private System.Windows.Forms.CheckBox cbKhoa;
-        private System.Windows.Forms.CheckBox cbTrangThai;
         private DevExpress.XtraBars.BarButtonItem btnXemBangCong;
         private DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView gvDanhSach;
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn MAKYCONG;
@@ -554,5 +555,7 @@
         private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn TRANGTHAI;
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
         private DevExpress.XtraBars.BarButtonItem btnRefresh;
+        private System.Windows.Forms.CheckBox cbTrangThai;
+        private System.Windows.Forms.CheckBox cbKhoa;
     }
 }

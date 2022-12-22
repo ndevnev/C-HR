@@ -103,15 +103,8 @@ namespace HRM
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                try
-                {
-                    nhanvien.Delete(id);
-                    loadData();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Lỗi " + ex.ToString());
-                }
+                nhanvien.Delete(id);
+                loadData();
             }
         }
 
@@ -172,7 +165,13 @@ namespace HRM
                 nv.NGAYSINH = dtNgaysinh.Value;
                 nv.DIACHI = txtDiachi.Text;
                 nv.SODIENTHOAI = txtDienthoai.Text;
-                nv.HINHANH = ImageToBase64(picHinhanh.Image, picHinhanh.Image.RawFormat);
+                try
+                {
+                    nv.HINHANH = ImageToBase64(picHinhanh.Image, picHinhanh.Image.RawFormat);
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi hình ảnh");
+                }
                 nv.MABOPHAN = int.Parse(cboBophan.SelectedValue.ToString());
                 nv.MAPHONGBAN = int.Parse(cboPhongban.SelectedValue.ToString());
                 nv.MACHUCVU = int.Parse(cboChucvu.SelectedValue.ToString());
