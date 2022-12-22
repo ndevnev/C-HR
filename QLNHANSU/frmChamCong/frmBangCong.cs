@@ -62,9 +62,10 @@ namespace QLNHANSU.frmChamCong
         {
             lblStatus.Text = "Bạn đang xoá";
             show(false);
-            if (MessageBox.Show("Xac nhan xoa", "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Xac nhan xoa (MKC): " +_maKyCong, "Thong bao", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 kyCongBAL.Delete(_maKyCong, 1);
+                loadData();
             }
         }
 

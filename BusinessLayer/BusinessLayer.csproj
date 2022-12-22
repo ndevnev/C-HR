@@ -48,18 +48,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BangKyCongChiTietBAL.cs" />
     <Compile Include="BoPhanBAL.cs" />
     <Compile Include="ChucVuBAL.cs" />
     <Compile Include="Common\CommonDateTimeBAL.cs" />
     <Compile Include="DataObject\DieuChuyenDTO.cs" />
     <Compile Include="DataObject\KhenThuong_KiLuatDTO.cs" />
     <Compile Include="DataObject\NhanVienDTO.cs" />
+    <Compile Include="DataObject\NHANVIEN_DIEUCHUYEN_DTO.cs" />
+    <Compile Include="DataObject\NHANVIEN_THOIVIEC_DTO.cs" />
     <Compile Include="HopDongBAL.cs" />
     <Compile Include="KyCongBAL.cs" />
     <Compile Include="KyCongChiTietBAL.cs" />
     <Compile Include="LoaiCaBAL.cs" />
     <Compile Include="LoaiCongBAL.cs" />
     <Compile Include="NhanVienBAL.cs" />
+    <Compile Include="NHANVIEN_DIEUCHUYEN_BAL.cs" />
+    <Compile Include="NHANVIEN_THOIVIEC_BAL.cs" />
     <Compile Include="PhongBanBAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TrinhDoBAL.cs" />

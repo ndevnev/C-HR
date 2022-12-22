@@ -31,14 +31,23 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBangCongChiTiet));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.cbTrangThai = new System.Windows.Forms.CheckBox();
             this.cbKhoa = new System.Windows.Forms.CheckBox();
-            this.cboThang = new System.Windows.Forms.ComboBox();
-            this.cboNam = new System.Windows.Forms.ComboBox();
+            this.cboCTThang = new System.Windows.Forms.ComboBox();
+            this.cboCTNam = new System.Windows.Forms.ComboBox();
             this.lblThang = new System.Windows.Forms.Label();
             this.lblNam = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.gcBangCongChiTiet = new DevExpress.XtraGrid.GridControl();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.mnCapNhatNgayCong = new System.Windows.Forms.ToolStripMenuItem();
             this.gvBangCongChiTiet = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridView();
             this.THONGTINNHANVIEN1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
             this.colMaNV = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
@@ -105,16 +114,16 @@
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnLuu = new DevExpress.XtraBars.BarButtonItem();
             this.btnHuy = new DevExpress.XtraBars.BarButtonItem();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.mnCapNhatNgayCong = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
+            this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcBangCongChiTiet)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gvBangCongChiTiet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -126,10 +135,11 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.groupControl2);
             this.splitContainer1.Panel1.Controls.Add(this.cbTrangThai);
             this.splitContainer1.Panel1.Controls.Add(this.cbKhoa);
-            this.splitContainer1.Panel1.Controls.Add(this.cboThang);
-            this.splitContainer1.Panel1.Controls.Add(this.cboNam);
+            this.splitContainer1.Panel1.Controls.Add(this.cboCTThang);
+            this.splitContainer1.Panel1.Controls.Add(this.cboCTNam);
             this.splitContainer1.Panel1.Controls.Add(this.lblThang);
             this.splitContainer1.Panel1.Controls.Add(this.lblNam);
             this.splitContainer1.Panel1.Controls.Add(this.lblStatus);
@@ -140,6 +150,69 @@
             this.splitContainer1.Size = new System.Drawing.Size(1918, 979);
             this.splitContainer1.SplitterDistance = 187;
             this.splitContainer1.TabIndex = 18;
+            // 
+            // groupControl2
+            // 
+            this.groupControl2.Controls.Add(this.labelControl4);
+            this.groupControl2.Controls.Add(this.labelControl5);
+            this.groupControl2.Controls.Add(this.labelControl6);
+            this.groupControl2.Controls.Add(this.labelControl3);
+            this.groupControl2.Controls.Add(this.labelControl2);
+            this.groupControl2.Controls.Add(this.labelControl1);
+            this.groupControl2.Location = new System.Drawing.Point(854, 6);
+            this.groupControl2.Name = "groupControl2";
+            this.groupControl2.Size = new System.Drawing.Size(437, 100);
+            this.groupControl2.TabIndex = 10;
+            this.groupControl2.Text = "Chú thích";
+            this.groupControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl2_Paint);
+            // 
+            // labelControl4
+            // 
+            this.labelControl4.Location = new System.Drawing.Point(313, 66);
+            this.labelControl4.Name = "labelControl4";
+            this.labelControl4.Size = new System.Drawing.Size(89, 19);
+            this.labelControl4.TabIndex = 6;
+            this.labelControl4.Text = "CN: Cả ngày";
+            // 
+            // labelControl5
+            // 
+            this.labelControl5.Location = new System.Drawing.Point(183, 66);
+            this.labelControl5.Name = "labelControl5";
+            this.labelControl5.Size = new System.Drawing.Size(61, 19);
+            this.labelControl5.TabIndex = 5;
+            this.labelControl5.Text = "C: Chiều";
+            // 
+            // labelControl6
+            // 
+            this.labelControl6.Location = new System.Drawing.Point(72, 66);
+            this.labelControl6.Name = "labelControl6";
+            this.labelControl6.Size = new System.Drawing.Size(55, 19);
+            this.labelControl6.TabIndex = 4;
+            this.labelControl6.Text = "S: Sáng";
+            // 
+            // labelControl3
+            // 
+            this.labelControl3.Location = new System.Drawing.Point(313, 41);
+            this.labelControl3.Name = "labelControl3";
+            this.labelControl3.Size = new System.Drawing.Size(101, 19);
+            this.labelControl3.TabIndex = 3;
+            this.labelControl3.Text = "VR: Việc riêng";
+            // 
+            // labelControl2
+            // 
+            this.labelControl2.Location = new System.Drawing.Point(183, 41);
+            this.labelControl2.Name = "labelControl2";
+            this.labelControl2.Size = new System.Drawing.Size(93, 19);
+            this.labelControl2.TabIndex = 2;
+            this.labelControl2.Text = "P: Nghỉ phép";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Location = new System.Drawing.Point(72, 41);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(57, 19);
+            this.labelControl1.TabIndex = 1;
+            this.labelControl1.Text = "V: Vắng";
             // 
             // cbTrangThai
             // 
@@ -161,10 +234,10 @@
             this.cbKhoa.Text = "Khoá";
             this.cbKhoa.UseVisualStyleBackColor = true;
             // 
-            // cboThang
+            // cboCTThang
             // 
-            this.cboThang.FormattingEnabled = true;
-            this.cboThang.Items.AddRange(new object[] {
+            this.cboCTThang.FormattingEnabled = true;
+            this.cboCTThang.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
@@ -177,15 +250,15 @@
             "10",
             "11",
             "12"});
-            this.cboThang.Location = new System.Drawing.Point(348, 50);
-            this.cboThang.Name = "cboThang";
-            this.cboThang.Size = new System.Drawing.Size(121, 27);
-            this.cboThang.TabIndex = 7;
+            this.cboCTThang.Location = new System.Drawing.Point(348, 50);
+            this.cboCTThang.Name = "cboCTThang";
+            this.cboCTThang.Size = new System.Drawing.Size(121, 27);
+            this.cboCTThang.TabIndex = 7;
             // 
-            // cboNam
+            // cboCTNam
             // 
-            this.cboNam.FormattingEnabled = true;
-            this.cboNam.Items.AddRange(new object[] {
+            this.cboCTNam.FormattingEnabled = true;
+            this.cboCTNam.Items.AddRange(new object[] {
             "2022",
             "2023",
             "2024",
@@ -197,10 +270,10 @@
             "2030",
             "2031",
             "2032"});
-            this.cboNam.Location = new System.Drawing.Point(81, 50);
-            this.cboNam.Name = "cboNam";
-            this.cboNam.Size = new System.Drawing.Size(121, 27);
-            this.cboNam.TabIndex = 6;
+            this.cboCTNam.Location = new System.Drawing.Point(81, 50);
+            this.cboCTNam.Name = "cboCTNam";
+            this.cboCTNam.Size = new System.Drawing.Size(121, 27);
+            this.cboCTNam.TabIndex = 6;
             // 
             // lblThang
             // 
@@ -239,6 +312,21 @@
             this.gcBangCongChiTiet.TabIndex = 0;
             this.gcBangCongChiTiet.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gvBangCongChiTiet});
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnCapNhatNgayCong});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(245, 36);
+            // 
+            // mnCapNhatNgayCong
+            // 
+            this.mnCapNhatNgayCong.Name = "mnCapNhatNgayCong";
+            this.mnCapNhatNgayCong.Size = new System.Drawing.Size(244, 32);
+            this.mnCapNhatNgayCong.Text = "Cập nhật ngày công";
+            this.mnCapNhatNgayCong.Click += new System.EventHandler(this.mnCapNhatNgayCong_Click_1);
             // 
             // gvBangCongChiTiet
             // 
@@ -1143,21 +1231,6 @@
             this.btnHuy.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnHuy.ImageOptions.SvgImage")));
             this.btnHuy.Name = "btnHuy";
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnCapNhatNgayCong});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(245, 36);
-            // 
-            // mnCapNhatNgayCong
-            // 
-            this.mnCapNhatNgayCong.Name = "mnCapNhatNgayCong";
-            this.mnCapNhatNgayCong.Size = new System.Drawing.Size(244, 32);
-            this.mnCapNhatNgayCong.Text = "Cập nhật ngày công";
-            this.mnCapNhatNgayCong.Click += new System.EventHandler(this.mnCapNhatNgayCong_Click_1);
-            // 
             // frmBangCongChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1185,10 +1258,13 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
+            this.groupControl2.ResumeLayout(false);
+            this.groupControl2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gcBangCongChiTiet)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gvBangCongChiTiet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1199,8 +1275,8 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.CheckBox cbTrangThai;
         private System.Windows.Forms.CheckBox cbKhoa;
-        private System.Windows.Forms.ComboBox cboThang;
-        private System.Windows.Forms.ComboBox cboNam;
+        private System.Windows.Forms.ComboBox cboCTThang;
+        private System.Windows.Forms.ComboBox cboCTNam;
         private System.Windows.Forms.Label lblThang;
         private System.Windows.Forms.Label lblNam;
         private System.Windows.Forms.Label lblStatus;
@@ -1273,5 +1349,12 @@
         private DevExpress.XtraGrid.Views.BandedGrid.GridBand CHITIETNGAYCONG1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem mnCapNhatNgayCong;
+        private DevExpress.XtraEditors.GroupControl groupControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl4;
+        private DevExpress.XtraEditors.LabelControl labelControl5;
+        private DevExpress.XtraEditors.LabelControl labelControl6;
+        private DevExpress.XtraEditors.LabelControl labelControl3;
+        private DevExpress.XtraEditors.LabelControl labelControl2;
+        private DevExpress.XtraEditors.LabelControl labelControl1;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using BusinessLayer.DataObject;
@@ -44,6 +45,7 @@ namespace BusinessLayer
                 nvDTO.MaTD = item.MATRINHDO;
                 var td = db.TB_TRINHDO.FirstOrDefault(t => t.MATRINHDO == item.MATRINHDO);
                 nvDTO.TenTD = td.TENTRINHDO;
+                nvDTO.DATHOIVIEC = item.DATHOIVIEC;
                 lstNVDTO.Add(nvDTO);
             }
 

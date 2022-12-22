@@ -110,6 +110,12 @@
     <Compile Include="frmNhanSu\frmChucVu.Designer.cs">
       <DependentUpon>frmChucVu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNhanSu\frmDieuChuyen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhanSu\frmDieuChuyen.Designer.cs">
+      <DependentUpon>frmDieuChuyen.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmNhanSu\frmHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,12 @@
     </Compile>
     <Compile Include="frmNhanSu\frmPhongBan.designer.cs">
       <DependentUpon>frmPhongBan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNhanSu\frmThoiViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNhanSu\frmThoiViec.designer.cs">
+      <DependentUpon>frmThoiViec.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNhanSu\frmTrinhDo.cs">
       <SubType>Form</SubType>
@@ -166,6 +178,9 @@
     <EmbeddedResource Include="frmNhanSu\frmChucVu.resx">
       <DependentUpon>frmChucVu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmNhanSu\frmDieuChuyen.resx">
+      <DependentUpon>frmDieuChuyen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmNhanSu\frmHopDong.resx">
       <DependentUpon>frmHopDong.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanSu\frmPhongBan.resx">
       <DependentUpon>frmPhongBan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNhanSu\frmThoiViec.resx">
+      <DependentUpon>frmThoiViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanSu\frmTrinhDo.resx">
       <DependentUpon>frmTrinhDo.cs</DependentUpon>
@@ -219,6 +237,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\no_image_baby.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del_Icon_x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

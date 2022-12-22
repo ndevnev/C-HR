@@ -105,6 +105,12 @@
     <Compile Include="TB_NHANVIENPHUCAP.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>
+    <Compile Include="TB_NHANVIEN_DIEUCHUYEN.cs">
+      <DependentUpon>QLNS.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TB_NHANVIEN_THOIVIEC.cs">
+      <DependentUpon>QLNS.tt</DependentUpon>
+    </Compile>
     <Compile Include="TB_PHONGBAN.cs">
       <DependentUpon>QLNS.tt</DependentUpon>
     </Compile>

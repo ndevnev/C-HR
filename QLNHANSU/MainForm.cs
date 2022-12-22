@@ -1,5 +1,6 @@
 ﻿using HRM;
 using QLNHANSU.frmChamCong;
+using QUANLYNHANSU;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -58,7 +59,9 @@ namespace QLNHANSU
 
         private void barButtonItem12_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            frmThoiViec f = new frmThoiViec();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void btnLoaiCa_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -78,6 +81,13 @@ namespace QLNHANSU
         private void barButtonItem7_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             frmBangCong f = new frmBangCong();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void btnDieuChuyen_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            frmDieuChuyen f = new frmDieuChuyen();
             f.MdiParent = this;
             f.Show();
         }

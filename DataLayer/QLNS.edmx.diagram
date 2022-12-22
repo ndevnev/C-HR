@@ -13,7 +13,6 @@
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_KHENTHUONGKYLUAT" Width="1.5" PointX="5.25" PointY="16.75" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_LOAICA" Width="1.5" PointX="6" PointY="19.875" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_LOAICONG" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_NHANVIEN" Width="1.5" PointX="3" PointY="10" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_NHANVIENPHUCAP" Width="1.5" PointX="8.25" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_PHONGBAN" Width="1.5" PointX="0.75" PointY="15" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_PHUCAP" Width="1.5" PointX="6" PointY="6.875" IsExpanded="true" />
@@ -21,22 +20,25 @@
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_TRINHDO" Width="1.5" PointX="0.75" PointY="17.375" IsExpanded="true" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_UNGLUONG" Width="1.5" PointX="5.25" PointY="26.375" IsExpanded="true" />
         <AssociationConnector Association="QUANLYNHANSUModel.FK_BANGCONG_LOAICONG" ManuallyRouted="false" />
-        <AssociationConnector Association="QUANLYNHANSUModel.FK_BANGCONG_NHANVIEN" ManuallyRouted="false" />
-        <AssociationConnector Association="QUANLYNHANSUModel.FK_BAOHIEM_NHANVIEN" ManuallyRouted="false" />
-        <AssociationConnector Association="QUANLYNHANSUModel.FK_NHANVIEN_BOPHAN" ManuallyRouted="false" />
-        <AssociationConnector Association="QUANLYNHANSUModel.FK_NHANVIEN_CHUCVU" ManuallyRouted="false" />
-        <AssociationConnector Association="QUANLYNHANSUModel.FK_HOPDONG_NHANVIEN" ManuallyRouted="false" />
-        <AssociationConnector Association="QUANLYNHANSUModel.FK_KHENTHUONGKYLUATNHANVIEN" ManuallyRouted="false" />
         <AssociationConnector Association="QUANLYNHANSUModel.FK_TANGCA_LOAICA" ManuallyRouted="false" />
-        <AssociationConnector Association="QUANLYNHANSUModel.FK_NHANVIEN_PHONGBAN" ManuallyRouted="false" />
-        <AssociationConnector Association="QUANLYNHANSUModel.FK_NHANVIEN_TRINHDO" ManuallyRouted="false" />
-        <AssociationConnector Association="QUANLYNHANSUModel.FK_NHANVIENPHUCAP_NHANVIEN" ManuallyRouted="false" />
-        <AssociationConnector Association="QUANLYNHANSUModel.FK_TANGCA_NHANVIEN" ManuallyRouted="false" />
-        <AssociationConnector Association="QUANLYNHANSUModel.FK_UNGLUONG_NHANVIEN" ManuallyRouted="false" />
         <AssociationConnector Association="QUANLYNHANSUModel.FK_NHANVIENPHUCAP_PHUCAP" ManuallyRouted="false" />
-        <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_BANGCONG_NHANVIEN_CHITIET" PointX="0.75" PointY="0.75" Width="1.5" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_KYCONG" Width="1.5" PointX="8.375" PointY="0.75" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_KYCONGCHITIET" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_NHANVIEN" Width="1.5" PointX="3" PointY="11.375" />
+        <AssociationConnector Association="QUANLYNHANSUModel.FK_BANGCONG_NHANVIEN" />
+        <AssociationConnector Association="QUANLYNHANSUModel.FK_BAOHIEM_NHANVIEN" />
+        <AssociationConnector Association="QUANLYNHANSUModel.FK_NHANVIEN_BOPHAN" />
+        <AssociationConnector Association="QUANLYNHANSUModel.FK_NHANVIEN_CHUCVU" />
+        <AssociationConnector Association="QUANLYNHANSUModel.FK_HOPDONG_NHANVIEN" />
+        <AssociationConnector Association="QUANLYNHANSUModel.FK_KHENTHUONGKYLUATNHANVIEN" />
+        <AssociationConnector Association="QUANLYNHANSUModel.FK_NHANVIEN_PHONGBAN" />
+        <AssociationConnector Association="QUANLYNHANSUModel.FK_NHANVIEN_TRINHDO" />
+        <AssociationConnector Association="QUANLYNHANSUModel.FK_NHANVIENPHUCAP_NHANVIEN" />
+        <AssociationConnector Association="QUANLYNHANSUModel.FK_TANGCA_NHANVIEN" />
+        <AssociationConnector Association="QUANLYNHANSUModel.FK_UNGLUONG_NHANVIEN" />
+        <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_NHANVIEN_DIEUCHUYEN" Width="4.75" PointX="10.375" PointY="10.75" />
+        <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_NHANVIEN_THOIVIEC" Width="4.75" PointX="12.375" PointY="0.75" />
+        <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_BANGCONG_NHANVIEN_CHITIET" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

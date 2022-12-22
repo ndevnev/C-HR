@@ -23,5 +23,7 @@ namespace BusinessLayer.DataObject
         public String TenCV { get; set; }
         public Nullable<int> MaTD { get; set; }
         public String TenTD { get; set; }
+        public bool? DATHOIVIEC { get; set; }
+
     }
 }

@@ -1,4 +1,6 @@
 ﻿using BusinessLayer;
+using BusinessLayer.Common;
+using DataLayer;
 using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Mask;
 using DevExpress.XtraEditors.Repository;
@@ -24,6 +26,9 @@ namespace QLNHANSU.frmChamCong
         }
 
         KyCongChiTietBAL _kyCongChiTietBAL;
+        KyCongBAL _kyCongBAL;
+        NhanVienBAL _nhanVienBAL;
+        BangKyCongChiTietBAL _bangCongChiTietBAL;
         public int _macty;
         public int _thang;
         public int _nam;
@@ -33,10 +38,41 @@ namespace QLNHANSU.frmChamCong
         {
             SplashScreenManager.ShowForm(typeof(frmWaitingcs), true, true);
             _kyCongChiTietBAL.phatSinhKyCongChiTiet(_macty, _thang, _nam);
+
+            List<TB_NHANVIEN> lstNhanVien = _nhanVienBAL.getList();
+            _kyCongChiTietBAL.phatSinhKyCongChiTiet(_macty, int.Parse(cboCTThang.Text), int.Parse(cboCTNam.Text));
+            foreach (var item in lstNhanVien)
+            {
+                for (int i = 1; i <= GetDayNumber(int.Parse(cboCTThang.Text), int.Parse(cboCTNam.Text)); i++)
+                {
+                    TB_BANGCONG_NHANVIEN_CHITIET bcct = new TB_BANGCONG_NHANVIEN_CHITIET();
+                    bcct.MANV = item.MANHANVIEN;
+                    bcct.MACTY = "1";
+                    bcct.HOTEN = item.HOVATEN;
+                    bcct.GIOVAO = "08:00";
+                    bcct.GIORA = "17:00";
+                    bcct.NGAY = DateTime.Parse(cboCTNam.Text + "-" + cboCTThang.Text + "-" + i.ToString());
+                    bcct.THU = CommonDateTimeBAL.layThuTrongTuan(int.Parse(cboCTNam.Text), int.Parse(cboCTThang.Text), i);
+                    bcct.NGAYPHEP = 0;
+                    bcct.CONGNGAYLE = 0;
+                    bcct.CONGCHUNHAT = 0;
+                    if (bcct.THU == "Chủ nhật")
+                        bcct.KYHIEU = "CN";
+                    else
+                        bcct.KYHIEU = "X";
+                    bcct.MAKYCONG = _maKyCong;
+                    bcct.CREATED_DATE = DateTime.Now;
+                    bcct.CREATED_BY = 1;
+                    _bangCongChiTietBAL.Add(bcct);
+                }
+            }
+
+            var kc = _kyCongBAL.getItem(int.Parse(cboCTNam.Text) * 100 + int.Parse(cboCTThang.Text));
+            kc.TRANGTHAI = true;
+            _kyCongBAL.Update(kc, 1);
             SplashScreenManager.CloseForm();
             loadBangCong();
         }
-
 
 
         private void btnDong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -62,10 +98,14 @@ namespace QLNHANSU.frmChamCong
         private void frmBangCongChiTiet_Load(object sender, EventArgs e)
         {
             _kyCongChiTietBAL = new KyCongChiTietBAL();
+            _kyCongBAL = new KyCongBAL();
+            _nhanVienBAL = new NhanVienBAL();
+             _bangCongChiTietBAL=new BangKyCongChiTietBAL();
+            gvBangCongChiTiet.OptionsBehavior.Editable = false;
             gcBangCongChiTiet.DataSource = _kyCongChiTietBAL.getList(_maKyCong); // Load ctiet ky cong len bang
             CustomView(_thang, _nam);
-            cboThang.Text = _thang.ToString();
-            cboNam.Text = _nam.ToString();
+            cboCTThang.Text = _thang.ToString();
+            cboCTNam.Text = _nam.ToString();
             loadBangCong();
         }
 
@@ -217,8 +257,9 @@ namespace QLNHANSU.frmChamCong
         void loadBangCong()
         {
             SplashScreenManager.ShowForm(typeof(frmWaitingcs), true, true);
-            gcBangCongChiTiet.DataSource = _kyCongChiTietBAL.getList(int.Parse(cboNam.Text)*100 + int.Parse(cboThang.Text));
-            CustomView(int.Parse(cboThang.Text), int.Parse(cboNam.Text));
+            gcBangCongChiTiet.DataSource = _kyCongChiTietBAL.getList(int.Parse(cboCTNam.Text)*100 + int.Parse(cboCTThang.Text));
+            _maKyCong = int.Parse(cboCTNam.Text) * 100 + int.Parse(cboCTThang.Text);
+            CustomView(int.Parse(cboCTThang.Text), int.Parse(cboCTNam.Text));
             gvBangCongChiTiet.OptionsBehavior.Editable= false;
             SplashScreenManager.CloseForm();
         }
@@ -232,7 +273,16 @@ namespace QLNHANSU.frmChamCong
         private void mnCapNhatNgayCong_Click_1(object sender, EventArgs e)
         {
             frmCapNhatNgayCong f = new frmCapNhatNgayCong();
+            f._maKyCong = _maKyCong;
+            f._maNhanVien = int.Parse(gvBangCongChiTiet.GetFocusedRowCellValue("MANV").ToString());
+            f._hoVaTen = gvBangCongChiTiet.GetFocusedRowCellValue("HOTEN").ToString();
+            f._ngayCong = gvBangCongChiTiet.FocusedColumn.FieldName.ToString();
             f.ShowDialog();
+        }
+
+        private void groupControl2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

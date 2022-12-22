@@ -23,5 +23,36 @@ namespace BusinessLayer.Common
         {
             return DateTime.DaysInMonth(nam, thang);
         }
+        public static string layThuTrongTuan(int nam, int thang, int ngay)
+        {
+            string thu = "";
+            DateTime newDate = new DateTime(nam, thang, ngay);
+            switch (newDate.DayOfWeek.ToString())
+            {
+                case "Monday":
+                    thu = "Thứ hai";
+                    break;
+                case "Tuesday":
+                    thu = "Thứ ba";
+                    break;
+
+                case "Wednesday":
+                    thu = "Thứ tư";
+                    break;
+                case "Thursday":
+                    thu = "Thứ năm";
+                    break;
+                case "Friday":
+                    thu = "Thứ sáu";
+                    break;
+                case "Saturday":
+                    thu = "Thứ bảy";
+                    break;
+                case "Sunday":
+                    thu = "Chủ nhật";
+                    break;
+            }
+            return thu;
+        }
     } 
 }

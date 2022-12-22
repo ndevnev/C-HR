@@ -103,8 +103,15 @@ namespace HRM
         {
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không!", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                nhanvien.Delete(id);
-                loadData();
+                try
+                {
+                    nhanvien.Delete(id);
+                    loadData();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Lỗi " + ex.ToString());
+                }
             }
         }
 

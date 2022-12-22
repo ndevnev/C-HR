@@ -39,6 +39,7 @@ namespace DataLayer
         public Nullable<int> MACHUCVU { get; set; }
         public Nullable<int> MATRINHDO { get; set; }
         public Nullable<double> LUONG { get; set; }
+        public Nullable<bool> DATHOIVIEC { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TB_BANGCONG> TB_BANGCONG { get; set; }

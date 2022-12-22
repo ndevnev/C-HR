@@ -12,25 +12,20 @@ namespace DataLayer
     using System;
     using System.Collections.Generic;
     
-    public partial class TB_BANGCONG_NHANVIEN_CHITIET
+    public partial class TB_NHANVIEN_DIEUCHUYEN
     {
-        public int ID { get; set; }
-        public Nullable<int> MAKYCONG { get; set; }
+        public string SOQD { get; set; }
         public Nullable<int> MANV { get; set; }
-        public string MACTY { get; set; }
-        public string HOTEN { get; set; }
         public Nullable<System.DateTime> NGAY { get; set; }
-        public string THU { get; set; }
-        public string GIOVAO { get; set; }
-        public string GIORA { get; set; }
-        public Nullable<double> NGAYPHEP { get; set; }
-        public Nullable<double> CONGNGAYLE { get; set; }
-        public Nullable<double> CONGCHUNHAT { get; set; }
-        public string KYHIEU { get; set; }
+        public Nullable<int> MAPB { get; set; }
+        public string LYDO { get; set; }
         public string GHICHU { get; set; }
         public Nullable<int> CREATED_BY { get; set; }
-        public Nullable<System.DateTime> CREATED_DATE { get; set; }
         public Nullable<int> UPDATED_BY { get; set; }
+        public Nullable<System.DateTime> CREATED_DATE { get; set; }
         public Nullable<System.DateTime> UPDATED_DATE { get; set; }
+        public Nullable<int> DELETED_BY { get; set; }
+        public Nullable<System.DateTime> DELETED_DATE { get; set; }
+        public Nullable<int> MAPB2 { get; set; }
     }
 }
