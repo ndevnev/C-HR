@@ -16,7 +16,11 @@ namespace BusinessLayer.Common
                 .Select(item => new DateTime(nam, thang, item))
                 .Where(date => date.DayOfWeek == DayOfWeek.Sunday)
                 .Count();
-            int result = DateTime.DaysInMonth(nam, thang) - songaychunhat;
+            int songaythubay = Enumerable.Range(1, totalDays)
+                .Select(item => new DateTime(nam, thang, item))
+                .Where(date => date.DayOfWeek == DayOfWeek.Saturday)
+                .Count();
+            int result = DateTime.DaysInMonth(nam, thang) - songaythubay - songaychunhat;
             return result;
         }
         public static int laySoNgayCuaThang(int thang, int nam)

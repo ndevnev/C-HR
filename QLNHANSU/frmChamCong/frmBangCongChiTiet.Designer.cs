@@ -114,6 +114,7 @@
             this.btnXoa = new DevExpress.XtraBars.BarButtonItem();
             this.btnLuu = new DevExpress.XtraBars.BarButtonItem();
             this.btnHuy = new DevExpress.XtraBars.BarButtonItem();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -153,6 +154,7 @@
             // 
             // groupControl2
             // 
+            this.groupControl2.Controls.Add(this.labelControl7);
             this.groupControl2.Controls.Add(this.labelControl4);
             this.groupControl2.Controls.Add(this.labelControl5);
             this.groupControl2.Controls.Add(this.labelControl6);
@@ -161,7 +163,7 @@
             this.groupControl2.Controls.Add(this.labelControl1);
             this.groupControl2.Location = new System.Drawing.Point(854, 6);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(437, 100);
+            this.groupControl2.Size = new System.Drawing.Size(583, 100);
             this.groupControl2.TabIndex = 10;
             this.groupControl2.Text = "Chú thích";
             this.groupControl2.Paint += new System.Windows.Forms.PaintEventHandler(this.groupControl2_Paint);
@@ -409,6 +411,7 @@
             this.gvBangCongChiTiet.OptionsView.ShowIndicator = false;
             this.gvBangCongChiTiet.RowHeight = 28;
             this.gvBangCongChiTiet.VertScrollVisibility = DevExpress.XtraGrid.Views.Base.ScrollVisibility.Always;
+            this.gvBangCongChiTiet.CustomDrawCell += new DevExpress.XtraGrid.Views.Base.RowCellCustomDrawEventHandler(this.gvBangCongChiTiet_CustomDrawCell);
             // 
             // THONGTINNHANVIEN1
             // 
@@ -1231,6 +1234,14 @@
             this.btnHuy.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnHuy.ImageOptions.SvgImage")));
             this.btnHuy.Name = "btnHuy";
             // 
+            // labelControl7
+            // 
+            this.labelControl7.Location = new System.Drawing.Point(439, 44);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(93, 19);
+            this.labelControl7.TabIndex = 7;
+            this.labelControl7.Text = "CT: Công tác";
+            // 
             // frmBangCongChiTiet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
@@ -1356,5 +1367,6 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl1;
+        private DevExpress.XtraEditors.LabelControl labelControl7;
     }
 }

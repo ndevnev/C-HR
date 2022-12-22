@@ -35,10 +35,9 @@
             this.grpTGNghi = new DevExpress.XtraEditors.GroupControl();
             this.rdgNgayNghi = new DevExpress.XtraEditors.RadioGroup();
             this.btnDong = new System.Windows.Forms.Button();
-            this.btnDiLam = new DevExpress.XtraEditors.SimpleButton();
             this.grpThongTin = new DevExpress.XtraEditors.GroupControl();
-            this.lblID = new DevExpress.XtraEditors.LabelControl();
             this.lblHoTen = new DevExpress.XtraEditors.LabelControl();
+            this.lblID = new DevExpress.XtraEditors.LabelControl();
             ((System.ComponentModel.ISupportInitialize)(this.grpChamCong)).BeginInit();
             this.grpChamCong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rdgChamCong.Properties)).BeginInit();
@@ -51,7 +50,7 @@
             // 
             // btnCapNhat
             // 
-            this.btnCapNhat.Location = new System.Drawing.Point(321, 328);
+            this.btnCapNhat.Location = new System.Drawing.Point(378, 328);
             this.btnCapNhat.Name = "btnCapNhat";
             this.btnCapNhat.Size = new System.Drawing.Size(107, 59);
             this.btnCapNhat.TabIndex = 0;
@@ -114,22 +113,13 @@
             // 
             // btnDong
             // 
-            this.btnDong.Location = new System.Drawing.Point(434, 328);
+            this.btnDong.Location = new System.Drawing.Point(537, 333);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(91, 59);
             this.btnDong.TabIndex = 4;
             this.btnDong.Text = "Đóng";
             this.btnDong.UseVisualStyleBackColor = true;
             this.btnDong.Click += new System.EventHandler(this.btnDong_Click);
-            // 
-            // btnDiLam
-            // 
-            this.btnDiLam.Location = new System.Drawing.Point(531, 328);
-            this.btnDiLam.Name = "btnDiLam";
-            this.btnDiLam.Size = new System.Drawing.Size(102, 56);
-            this.btnDiLam.TabIndex = 5;
-            this.btnDiLam.Text = "Đi làm";
-            this.btnDiLam.Click += new System.EventHandler(this.btnDiLam_Click);
             // 
             // grpThongTin
             // 
@@ -141,14 +131,6 @@
             this.grpThongTin.TabIndex = 6;
             this.grpThongTin.Text = "Thông tin";
             // 
-            // lblID
-            // 
-            this.lblID.Location = new System.Drawing.Point(6, 45);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(28, 19);
-            this.lblID.TabIndex = 0;
-            this.lblID.Text = "ID: ";
-            // 
             // lblHoTen
             // 
             this.lblHoTen.Location = new System.Drawing.Point(6, 70);
@@ -157,13 +139,20 @@
             this.lblHoTen.TabIndex = 1;
             this.lblHoTen.Text = "Họ và tên\r\n";
             // 
+            // lblID
+            // 
+            this.lblID.Location = new System.Drawing.Point(6, 45);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(28, 19);
+            this.lblID.TabIndex = 0;
+            this.lblID.Text = "ID: ";
+            // 
             // frmCapNhatNgayCong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 408);
             this.Controls.Add(this.grpThongTin);
-            this.Controls.Add(this.btnDiLam);
             this.Controls.Add(this.btnDong);
             this.Controls.Add(this.grpTGNghi);
             this.Controls.Add(this.grpChamCong);
@@ -194,7 +183,6 @@
         private DevExpress.XtraEditors.GroupControl grpTGNghi;
         private DevExpress.XtraEditors.RadioGroup rdgNgayNghi;
         private System.Windows.Forms.Button btnDong;
-        private DevExpress.XtraEditors.SimpleButton btnDiLam;
         private DevExpress.XtraEditors.GroupControl grpThongTin;
         private DevExpress.XtraEditors.LabelControl lblHoTen;
         private DevExpress.XtraEditors.LabelControl lblID;

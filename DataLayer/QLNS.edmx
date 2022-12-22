@@ -37,6 +37,7 @@
           <Property Name="CREATED_DATE" Type="datetime" />
           <Property Name="UPDATED_BY" Type="int" />
           <Property Name="UPDATED_DATE" Type="datetime" />
+          <Property Name="NGAYCONG" Type="float" />
         </EntityType>
         <EntityType Name="TB_BAOHIEM">
           <Key>
@@ -1074,6 +1075,7 @@
           <Property Name="CREATED_DATE" Type="DateTime" Precision="3" />
           <Property Name="UPDATED_BY" Type="Int32" />
           <Property Name="UPDATED_DATE" Type="DateTime" Precision="3" />
+          <Property Name="NGAYCONG" Type="Double" />
         </EntityType>
         </Schema>
     </edmx:ConceptualModels>
@@ -1352,6 +1354,7 @@
           <EntitySetMapping Name="TB_BANGCONG_NHANVIEN_CHITIET">
             <EntityTypeMapping TypeName="QUANLYNHANSUModel.TB_BANGCONG_NHANVIEN_CHITIET">
               <MappingFragment StoreEntitySet="TB_BANGCONG_NHANVIEN_CHITIET">
+                <ScalarProperty Name="NGAYCONG" ColumnName="NGAYCONG" />
                 <ScalarProperty Name="UPDATED_DATE" ColumnName="UPDATED_DATE" />
                 <ScalarProperty Name="UPDATED_BY" ColumnName="UPDATED_BY" />
                 <ScalarProperty Name="CREATED_DATE" ColumnName="CREATED_DATE" />

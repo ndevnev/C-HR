@@ -38,7 +38,7 @@
         <AssociationConnector Association="QUANLYNHANSUModel.FK_UNGLUONG_NHANVIEN" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_NHANVIEN_DIEUCHUYEN" Width="4.75" PointX="10.375" PointY="10.75" />
         <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_NHANVIEN_THOIVIEC" Width="4.75" PointX="12.375" PointY="0.75" />
-        <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_BANGCONG_NHANVIEN_CHITIET" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="QUANLYNHANSUModel.TB_BANGCONG_NHANVIEN_CHITIET" Width="4.75" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
