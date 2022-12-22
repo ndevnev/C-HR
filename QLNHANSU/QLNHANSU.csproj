@@ -74,6 +74,12 @@
     <Compile Include="frmChamCong\frmBangCongChiTiet.Designer.cs">
       <DependentUpon>frmBangCongChiTiet.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmChamCong\frmCapNhatNgayCong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChamCong\frmCapNhatNgayCong.Designer.cs">
+      <DependentUpon>frmCapNhatNgayCong.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmChamCong\frmLoaiCa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     </Compile>
     <Compile Include="frmChamCong\frmLoaiCong.Designer.cs">
       <DependentUpon>frmLoaiCong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmChamCong\frmWaitingcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmChamCong\frmWaitingcs.Designer.cs">
+      <DependentUpon>frmWaitingcs.cs</DependentUpon>
     </Compile>
     <Compile Include="frmNhanSu\frmBoPhan.cs">
       <SubType>Form</SubType>
@@ -136,11 +148,17 @@
     <EmbeddedResource Include="frmChamCong\frmBangCongChiTiet.resx">
       <DependentUpon>frmBangCongChiTiet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmChamCong\frmCapNhatNgayCong.resx">
+      <DependentUpon>frmCapNhatNgayCong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmChamCong\frmLoaiCa.resx">
       <DependentUpon>frmLoaiCa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmChamCong\frmLoaiCong.resx">
       <DependentUpon>frmLoaiCong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmChamCong\frmWaitingcs.resx">
+      <DependentUpon>frmWaitingcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmNhanSu\frmBoPhan.resx">
       <DependentUpon>frmBoPhan.cs</DependentUpon>

@@ -3,6 +3,7 @@ using DevExpress.XtraEditors;
 using DevExpress.XtraEditors.Mask;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraSplashScreen;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,7 +31,9 @@ namespace QLNHANSU.frmChamCong
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
+            SplashScreenManager.ShowForm(typeof(frmWaitingcs), true, true);
             _kyCongChiTietBAL.phatSinhKyCongChiTiet(_macty, _thang, _nam);
+            SplashScreenManager.CloseForm();
             loadBangCong();
         }
 
@@ -59,10 +62,11 @@ namespace QLNHANSU.frmChamCong
         private void frmBangCongChiTiet_Load(object sender, EventArgs e)
         {
             _kyCongChiTietBAL = new KyCongChiTietBAL();
-            gcBangCongChiTiet.DataSource = _kyCongChiTietBAL.getList(_maKyCong);
+            gcBangCongChiTiet.DataSource = _kyCongChiTietBAL.getList(_maKyCong); // Load ctiet ky cong len bang
             CustomView(_thang, _nam);
             cboThang.Text = _thang.ToString();
             cboNam.Text = _nam.ToString();
+            loadBangCong();
         }
 
         private int GetDayNumber(int thang, int nam)
@@ -212,8 +216,23 @@ namespace QLNHANSU.frmChamCong
 
         void loadBangCong()
         {
-            gcBangCongChiTiet.DataSource = _kyCongChiTietBAL.getList(int.Parse(cboNam.Text) * 100 + int.Parse(cboThang.Text));
+            SplashScreenManager.ShowForm(typeof(frmWaitingcs), true, true);
+            gcBangCongChiTiet.DataSource = _kyCongChiTietBAL.getList(int.Parse(cboNam.Text)*100 + int.Parse(cboThang.Text));
             CustomView(int.Parse(cboThang.Text), int.Parse(cboNam.Text));
+            gvBangCongChiTiet.OptionsBehavior.Editable= false;
+            SplashScreenManager.CloseForm();
+        }
+
+        private void mnCapNhatNgayCong_Click(object sender, EventArgs e)
+        {
+            frmCapNhatNgayCong f = new frmCapNhatNgayCong();
+            f.ShowDialog();
+        }
+
+        private void mnCapNhatNgayCong_Click_1(object sender, EventArgs e)
+        {
+            frmCapNhatNgayCong f = new frmCapNhatNgayCong();
+            f.ShowDialog();
         }
     }
 }

@@ -54,14 +54,15 @@
             this.lblNam = new System.Windows.Forms.Label();
             this.lblStatus = new System.Windows.Forms.Label();
             this.gcDanhSach = new DevExpress.XtraGrid.GridControl();
-            this.gvDanhSach = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.MAKYCONG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NAM = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.THANG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.KHOA = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NGAYTINHCONG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.NGAYCONGTRONGTHANG = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.TRANGTHAI = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gvDanhSach = new DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView();
+            this.gridBand1 = new DevExpress.XtraGrid.Views.BandedGrid.GridBand();
+            this.MAKYCONG = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.NAM = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.THANG = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.KHOA = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.NGAYTINHCONG = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.NGAYCONGTRONGTHANG = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
+            this.TRANGTHAI = new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn();
             this.barDockControl1 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl2 = new DevExpress.XtraBars.BarDockControl();
             this.barDockControl3 = new DevExpress.XtraBars.BarDockControl();
@@ -350,7 +351,9 @@
             // 
             // gvDanhSach
             // 
-            this.gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gvDanhSach.Bands.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.GridBand[] {
+            this.gridBand1});
+            this.gvDanhSach.Columns.AddRange(new DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn[] {
             this.MAKYCONG,
             this.NAM,
             this.THANG,
@@ -362,6 +365,20 @@
             this.gvDanhSach.Name = "gvDanhSach";
             this.gvDanhSach.Click += new System.EventHandler(this.gvDanhSach_Click);
             // 
+            // gridBand1
+            // 
+            this.gridBand1.Caption = "Bảng kỳ công";
+            this.gridBand1.Columns.Add(this.MAKYCONG);
+            this.gridBand1.Columns.Add(this.NAM);
+            this.gridBand1.Columns.Add(this.THANG);
+            this.gridBand1.Columns.Add(this.KHOA);
+            this.gridBand1.Columns.Add(this.NGAYTINHCONG);
+            this.gridBand1.Columns.Add(this.NGAYCONGTRONGTHANG);
+            this.gridBand1.Columns.Add(this.TRANGTHAI);
+            this.gridBand1.Name = "gridBand1";
+            this.gridBand1.VisibleIndex = 0;
+            this.gridBand1.Width = 784;
+            // 
             // MAKYCONG
             // 
             this.MAKYCONG.Caption = "Mã kỳ công";
@@ -369,7 +386,6 @@
             this.MAKYCONG.MinWidth = 30;
             this.MAKYCONG.Name = "MAKYCONG";
             this.MAKYCONG.Visible = true;
-            this.MAKYCONG.VisibleIndex = 0;
             this.MAKYCONG.Width = 112;
             // 
             // NAM
@@ -379,7 +395,6 @@
             this.NAM.MinWidth = 30;
             this.NAM.Name = "NAM";
             this.NAM.Visible = true;
-            this.NAM.VisibleIndex = 1;
             this.NAM.Width = 112;
             // 
             // THANG
@@ -389,7 +404,6 @@
             this.THANG.MinWidth = 30;
             this.THANG.Name = "THANG";
             this.THANG.Visible = true;
-            this.THANG.VisibleIndex = 2;
             this.THANG.Width = 112;
             // 
             // KHOA
@@ -399,7 +413,6 @@
             this.KHOA.MinWidth = 30;
             this.KHOA.Name = "KHOA";
             this.KHOA.Visible = true;
-            this.KHOA.VisibleIndex = 3;
             this.KHOA.Width = 112;
             // 
             // NGAYTINHCONG
@@ -409,7 +422,6 @@
             this.NGAYTINHCONG.MinWidth = 30;
             this.NGAYTINHCONG.Name = "NGAYTINHCONG";
             this.NGAYTINHCONG.Visible = true;
-            this.NGAYTINHCONG.VisibleIndex = 4;
             this.NGAYTINHCONG.Width = 112;
             // 
             // NGAYCONGTRONGTHANG
@@ -419,7 +431,6 @@
             this.NGAYCONGTRONGTHANG.MinWidth = 30;
             this.NGAYCONGTRONGTHANG.Name = "NGAYCONGTRONGTHANG";
             this.NGAYCONGTRONGTHANG.Visible = true;
-            this.NGAYCONGTRONGTHANG.VisibleIndex = 5;
             this.NGAYCONGTRONGTHANG.Width = 112;
             // 
             // TRANGTHAI
@@ -429,7 +440,6 @@
             this.TRANGTHAI.MinWidth = 30;
             this.TRANGTHAI.Name = "TRANGTHAI";
             this.TRANGTHAI.Visible = true;
-            this.TRANGTHAI.VisibleIndex = 6;
             this.TRANGTHAI.Width = 112;
             // 
             // barDockControl1
@@ -514,8 +524,6 @@
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label lblStatus;
         private DevExpress.XtraGrid.GridControl gcDanhSach;
-        private DevExpress.XtraGrid.Views.Grid.GridView gvDanhSach;
-        private DevExpress.XtraGrid.Columns.GridColumn MAKYCONG;
         private DevExpress.XtraBars.BarDockControl barDockControl1;
         private DevExpress.XtraBars.BarDockControl barDockControl2;
         private DevExpress.XtraBars.BarDockControl barDockControl3;
@@ -525,13 +533,16 @@
         private System.Windows.Forms.ComboBox cboThang;
         private System.Windows.Forms.ComboBox cboNam;
         private System.Windows.Forms.CheckBox cbKhoa;
-        private DevExpress.XtraGrid.Columns.GridColumn NAM;
-        private DevExpress.XtraGrid.Columns.GridColumn THANG;
-        private DevExpress.XtraGrid.Columns.GridColumn KHOA;
-        private DevExpress.XtraGrid.Columns.GridColumn NGAYTINHCONG;
-        private DevExpress.XtraGrid.Columns.GridColumn NGAYCONGTRONGTHANG;
-        private DevExpress.XtraGrid.Columns.GridColumn TRANGTHAI;
         private System.Windows.Forms.CheckBox cbTrangThai;
         private DevExpress.XtraBars.BarButtonItem btnXemBangCong;
+        private DevExpress.XtraGrid.Views.BandedGrid.AdvBandedGridView gvDanhSach;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn MAKYCONG;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn NAM;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn THANG;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn KHOA;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn NGAYTINHCONG;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn NGAYCONGTRONGTHANG;
+        private DevExpress.XtraGrid.Views.BandedGrid.BandedGridColumn TRANGTHAI;
+        private DevExpress.XtraGrid.Views.BandedGrid.GridBand gridBand1;
     }
 }

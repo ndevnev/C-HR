@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BusinessLayer.Common;
 using DataLayer;
 
 namespace BusinessLayer
@@ -92,7 +93,8 @@ namespace BusinessLayer
                 kycongchitiet.D29 = listDay[28];
                 kycongchitiet.D30 = listDay[29];
                 kycongchitiet.D31 = listDay[30];
-
+                kycongchitiet.NGAYCONG = CommonDateTimeBAL.demSoNgayLamViecTrongThang(thang, nam);
+                kycongchitiet.TONGNGAYCONG = CommonDateTimeBAL.demSoNgayLamViecTrongThang(thang, nam);
                 kycongchitiet.MAKYCONG = nam * 100 + thang;
                 db.TB_KYCONGCHITIET.Add(kycongchitiet);
                 try

@@ -23,5 +23,5 @@ namespace BusinessLayer.Common
         {
             return DateTime.DaysInMonth(nam, thang);
         }
-    }
+    } 
 }
