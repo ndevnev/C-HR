@@ -1121,7 +1121,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Caption = "Phát sinh kỳ công";
+            this.btnThem.Caption = "Phát sinh CT kỳ công";
             this.btnThem.Id = 0;
             this.btnThem.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnThem.ImageOptions.SvgImage")));
             this.btnThem.Name = "btnThem";

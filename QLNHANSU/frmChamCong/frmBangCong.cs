@@ -29,7 +29,7 @@ namespace QLNHANSU.frmChamCong
         KyCongBAL kyCongBAL;
         int _maKyCong;
 
-        void loadData()
+        private void loadData()
         {
             gcDanhSach.DataSource = kyCongBAL.getList();
             gvDanhSach.OptionsBehavior.Editable = false;
@@ -139,7 +139,13 @@ namespace QLNHANSU.frmChamCong
                 kc.NGAYTINHCONG = DateTime.Now;
                 kc.CREATED_BY = 1;
                 kc.CREATED_DATE= DateTime.Now;
-                kyCongBAL.Add(kc);
+
+                try { 
+                    kyCongBAL.Add(kc);
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("Kỳ công đã tồn tại");
+                }
             }
             else //ngược lại thì Update
             {
@@ -166,6 +172,12 @@ namespace QLNHANSU.frmChamCong
             f._thang = int.Parse(cboThang.Text);
             f._nam = int.Parse(cboNam.Text);
             f.ShowDialog();
+        }
+
+        private void btnRefresh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            gcDanhSach.DataSource = kyCongBAL.getList();
+            gvDanhSach.OptionsBehavior.Editable = false;
         }
     }
 }

@@ -41,6 +41,20 @@ namespace QLNHANSU.frmChamCong
 				MessageBox.Show("Kỳ công đã được phát sinh.","Thông báo");
 				return;
             }
+           
+            var kc = _kyCongBAL.getItem(int.Parse(cboCTNam.Text) * 100 + int.Parse(cboCTThang.Text));
+            if (kc != null)
+            {
+                kc.TRANGTHAI = true;
+                _kyCongBAL.Update(kc, 1);
+            }
+            else
+            {
+                int mkc = int.Parse(cboCTNam.Text) * 100 + int.Parse(cboCTThang.Text);
+                MessageBox.Show("Chưa tạo kỳ công ["+mkc+"] ở bảng công");
+                return;
+            }
+
             _kyCongChiTietBAL.phatSinhKyCongChiTiet(1, int.Parse(cboCTThang.Text), int.Parse(cboCTNam.Text));
             List<TB_NHANVIEN> lstNhanVien = _nhanVienBAL.getList();
             foreach (var item in lstNhanVien)
@@ -67,12 +81,8 @@ namespace QLNHANSU.frmChamCong
                     bcct.CREATED_BY = 1;
                     _bangCongChiTietBAL.Add(bcct);
                 }
+                loadBangCong();
             }
-
-            var kc = _kyCongBAL.getItem(int.Parse(cboCTNam.Text) * 100 + int.Parse(cboCTThang.Text));
-            kc.TRANGTHAI = true;
-            _kyCongBAL.Update(kc, 1);
-            loadBangCong();
         }
 
 
