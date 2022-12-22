@@ -36,11 +36,13 @@ namespace QLNHANSU.frmChamCong
 
         private void btnThem_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            SplashScreenManager.ShowForm(typeof(frmWaitingcs), true, true);
-            _kyCongChiTietBAL.phatSinhKyCongChiTiet(_macty, _thang, _nam);
-
+            if (_kyCongBAL.daTonTai(int.Parse(cboCTNam.Text) * 100 + int.Parse(cboCTThang.Text)))
+            {
+				MessageBox.Show("Kỳ công đã được phát sinh.","Thông báo");
+				return;
+            }
+            _kyCongChiTietBAL.phatSinhKyCongChiTiet(1, int.Parse(cboCTThang.Text), int.Parse(cboCTNam.Text));
             List<TB_NHANVIEN> lstNhanVien = _nhanVienBAL.getList();
-            _kyCongChiTietBAL.phatSinhKyCongChiTiet(_macty, int.Parse(cboCTThang.Text), int.Parse(cboCTNam.Text));
             foreach (var item in lstNhanVien)
             {
                 for (int i = 1; i <= GetDayNumber(int.Parse(cboCTThang.Text), int.Parse(cboCTNam.Text)); i++)
@@ -70,7 +72,6 @@ namespace QLNHANSU.frmChamCong
             var kc = _kyCongBAL.getItem(int.Parse(cboCTNam.Text) * 100 + int.Parse(cboCTThang.Text));
             kc.TRANGTHAI = true;
             _kyCongBAL.Update(kc, 1);
-            SplashScreenManager.CloseForm();
             loadBangCong();
         }
 
@@ -256,12 +257,10 @@ namespace QLNHANSU.frmChamCong
 
         void loadBangCong()
         {
-            SplashScreenManager.ShowForm(typeof(frmWaitingcs), true, true);
             gcBangCongChiTiet.DataSource = _kyCongChiTietBAL.getList(int.Parse(cboCTNam.Text)*100 + int.Parse(cboCTThang.Text));
             _maKyCong = int.Parse(cboCTNam.Text) * 100 + int.Parse(cboCTThang.Text);
             CustomView(int.Parse(cboCTThang.Text), int.Parse(cboCTNam.Text));
             gvBangCongChiTiet.OptionsBehavior.Editable= false;
-            SplashScreenManager.CloseForm();
         }
 
         private void mnCapNhatNgayCong_Click(object sender, EventArgs e)

@@ -72,5 +72,22 @@ namespace BusinessLayer
                 throw new Exception("Lỗi: " + ex.Message);
             }
         }
+
+        public bool daTonTai(int maKyCong)
+        {
+            var kc = db.TB_KYCONG.FirstOrDefault(x => x.MAKYCONG == maKyCong);
+            if (kc!=null)
+            {
+                if (kc.TRANGTHAI == true)
+                {
+                    return true;
+                }
+                    else
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
     }
 }

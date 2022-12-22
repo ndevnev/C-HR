@@ -163,14 +163,9 @@ namespace QLNHANSU.frmChamCong
             frmBangCongChiTiet f = new frmBangCongChiTiet();
             f._maKyCong = _maKyCong;
             f._macty = 1;
-            try {
-                f._thang = int.Parse(cboThang.Text);
-                f._nam = int.Parse(cboNam.Text);
-                f.ShowDialog();
-            } catch (Exception ex)
-            {
-                MessageBox.Show("Chưa chọn kỳ công hoặc chọn tháng[cbx] và năm[cbx] của kỳ công");
-            }
+            f._thang = int.Parse(cboThang.Text);
+            f._nam = int.Parse(cboNam.Text);
+            f.ShowDialog();
         }
     }
 }
