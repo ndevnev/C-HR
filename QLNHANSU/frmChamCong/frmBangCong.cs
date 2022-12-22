@@ -31,6 +31,7 @@ namespace QLNHANSU.frmChamCong
 
         private void loadData()
         {
+            kyCongBAL= new KyCongBAL();
             gcDanhSach.DataSource = kyCongBAL.getList();
             gvDanhSach.OptionsBehavior.Editable = false;
         }
@@ -172,12 +173,6 @@ namespace QLNHANSU.frmChamCong
             f._thang = int.Parse(cboThang.Text);
             f._nam = int.Parse(cboNam.Text);
             f.ShowDialog();
-        }
-
-        private void btnRefresh_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
-        {
-            gcDanhSach.DataSource = kyCongBAL.getList();
-            gvDanhSach.OptionsBehavior.Editable = false;
         }
     }
 }

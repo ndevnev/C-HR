@@ -265,8 +265,9 @@ namespace QLNHANSU.frmChamCong
 
         }
 
-        void loadBangCong()
+        public void loadBangCong()
         {
+            _kyCongChiTietBAL = new KyCongChiTietBAL();
             gcBangCongChiTiet.DataSource = _kyCongChiTietBAL.getList(int.Parse(cboCTNam.Text)*100 + int.Parse(cboCTThang.Text));
             _maKyCong = int.Parse(cboCTNam.Text) * 100 + int.Parse(cboCTThang.Text);
             CustomView(int.Parse(cboCTThang.Text), int.Parse(cboCTNam.Text));

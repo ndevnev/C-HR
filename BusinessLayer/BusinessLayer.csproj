@@ -52,6 +52,7 @@
     <Compile Include="BoPhanBAL.cs" />
     <Compile Include="ChucVuBAL.cs" />
     <Compile Include="Common\CommonDateTimeBAL.cs" />
+    <Compile Include="Common\DatabaseHelper.cs" />
     <Compile Include="DataObject\DieuChuyenDTO.cs" />
     <Compile Include="DataObject\KhenThuong_KiLuatDTO.cs" />
     <Compile Include="DataObject\NhanVienDTO.cs" />
