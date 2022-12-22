@@ -621,7 +621,7 @@
             this.label5.Text = "Điện thoại:";
             // 
             // picHinhanh
-             this.picHinhanh.Image = global::QLNHANSU.Properties.Resources.no_image_baby;
+            this.picHinhanh.Image = global::QLNHANSU.Properties.Resources.no_image_baby;
             this.picHinhanh.Location = new System.Drawing.Point(52, 24);
             this.picHinhanh.Name = "picHinhanh";
             this.picHinhanh.Size = new System.Drawing.Size(182, 202);

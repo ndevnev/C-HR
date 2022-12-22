@@ -20,6 +20,9 @@ namespace QLNHANSU.frmChamCong
         public frmBangCong()
         {
             InitializeComponent();
+            cboNam.Text = DateTime.Now.Year.ToString();
+            cboThang.Text = DateTime.Now.Month.ToString();
+
         }
 
         bool _btnThem = false;
