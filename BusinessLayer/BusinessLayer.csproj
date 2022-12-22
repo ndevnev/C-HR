@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BangKyCongChiTietBAL.cs" />
+    <Compile Include="BangLuongBAL.cs" />
     <Compile Include="BoPhanBAL.cs" />
     <Compile Include="ChucVuBAL.cs" />
     <Compile Include="Common\CommonDateTimeBAL.cs" />

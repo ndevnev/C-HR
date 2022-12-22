@@ -86,6 +86,7 @@
             this.dtNgaysinh = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.chkGioitinh = new System.Windows.Forms.CheckBox();
+            this.DATHOIVIEC = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gvDanhSach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gcDanhSach)).BeginInit();
@@ -102,7 +103,7 @@
             this.barDockControl1.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControl1.Location = new System.Drawing.Point(1827, 34);
             this.barDockControl1.Manager = null;
-            this.barDockControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControl1.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControl1.Size = new System.Drawing.Size(0, 712);
             // 
             // barButtonItem1
@@ -153,7 +154,7 @@
             this.barDockControl4.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControl4.Location = new System.Drawing.Point(0, 34);
             this.barDockControl4.Manager = null;
-            this.barDockControl4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControl4.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControl4.Size = new System.Drawing.Size(0, 712);
             // 
             // barDockControl5
@@ -170,7 +171,7 @@
             this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
             this.barDockControlRight.Location = new System.Drawing.Point(1827, 34);
             this.barDockControlRight.Manager = this.barManager1;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlRight.Size = new System.Drawing.Size(0, 712);
             // 
             // barManager1
@@ -277,7 +278,7 @@
             this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
             this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
             this.barDockControlTop.Manager = this.barManager1;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlTop.Size = new System.Drawing.Size(1827, 34);
             // 
             // barDockControlBottom
@@ -286,7 +287,7 @@
             this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.barDockControlBottom.Location = new System.Drawing.Point(0, 746);
             this.barDockControlBottom.Manager = this.barManager1;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlBottom.Size = new System.Drawing.Size(1827, 20);
             // 
             // barDockControlLeft
@@ -295,7 +296,7 @@
             this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
             this.barDockControlLeft.Location = new System.Drawing.Point(0, 34);
             this.barDockControlLeft.Manager = this.barManager1;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4);
             this.barDockControlLeft.Size = new System.Drawing.Size(0, 712);
             // 
             // HoTen
@@ -337,7 +338,8 @@
             this.TenCV,
             this.TenBP,
             this.TenPB,
-            this.TenTD});
+            this.TenTD,
+            this.DATHOIVIEC});
             this.gvDanhSach.DetailHeight = 416;
             this.gvDanhSach.GridControl = this.gcDanhSach;
             this.gvDanhSach.Name = "gvDanhSach";
@@ -463,10 +465,10 @@
             // gcDanhSach
             // 
             this.gcDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcDanhSach.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcDanhSach.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(4);
             this.gcDanhSach.Location = new System.Drawing.Point(0, 0);
             this.gcDanhSach.MainView = this.gvDanhSach;
-            this.gcDanhSach.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gcDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.gcDanhSach.MenuManager = this.barManager1;
             this.gcDanhSach.Name = "gcDanhSach";
             this.gcDanhSach.Size = new System.Drawing.Size(1827, 375);
@@ -478,7 +480,7 @@
             // 
             this.txtHoten.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtHoten.Location = new System.Drawing.Point(501, 71);
-            this.txtHoten.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHoten.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoten.Name = "txtHoten";
             this.txtHoten.Size = new System.Drawing.Size(293, 32);
             this.txtHoten.TabIndex = 1;
@@ -498,7 +500,7 @@
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.Location = new System.Drawing.Point(0, 34);
-            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -536,7 +538,7 @@
             // btnChonhinh
             // 
             this.btnChonhinh.Location = new System.Drawing.Point(112, 281);
-            this.btnChonhinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnChonhinh.Margin = new System.Windows.Forms.Padding(4);
             this.btnChonhinh.Name = "btnChonhinh";
             this.btnChonhinh.Size = new System.Drawing.Size(132, 38);
             this.btnChonhinh.TabIndex = 19;
@@ -548,7 +550,7 @@
             // 
             this.cboTrinhdo.FormattingEnabled = true;
             this.cboTrinhdo.Location = new System.Drawing.Point(1044, 240);
-            this.cboTrinhdo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboTrinhdo.Margin = new System.Windows.Forms.Padding(4);
             this.cboTrinhdo.Name = "cboTrinhdo";
             this.cboTrinhdo.Size = new System.Drawing.Size(235, 27);
             this.cboTrinhdo.TabIndex = 18;
@@ -568,7 +570,7 @@
             // 
             this.cboPhongban.FormattingEnabled = true;
             this.cboPhongban.Location = new System.Drawing.Point(1044, 131);
-            this.cboPhongban.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboPhongban.Margin = new System.Windows.Forms.Padding(4);
             this.cboPhongban.Name = "cboPhongban";
             this.cboPhongban.Size = new System.Drawing.Size(235, 27);
             this.cboPhongban.TabIndex = 16;
@@ -588,7 +590,7 @@
             // 
             this.cboBophan.FormattingEnabled = true;
             this.cboBophan.Location = new System.Drawing.Point(1044, 189);
-            this.cboBophan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboBophan.Margin = new System.Windows.Forms.Padding(4);
             this.cboBophan.Name = "cboBophan";
             this.cboBophan.Size = new System.Drawing.Size(235, 27);
             this.cboBophan.TabIndex = 14;
@@ -608,7 +610,7 @@
             // 
             this.cboChucvu.FormattingEnabled = true;
             this.cboChucvu.Location = new System.Drawing.Point(1044, 76);
-            this.cboChucvu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboChucvu.Margin = new System.Windows.Forms.Padding(4);
             this.cboChucvu.Name = "cboChucvu";
             this.cboChucvu.Size = new System.Drawing.Size(235, 27);
             this.cboChucvu.TabIndex = 12;
@@ -628,7 +630,7 @@
             // 
             this.txtDienthoai.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtDienthoai.Location = new System.Drawing.Point(501, 227);
-            this.txtDienthoai.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDienthoai.Margin = new System.Windows.Forms.Padding(4);
             this.txtDienthoai.Name = "txtDienthoai";
             this.txtDienthoai.Size = new System.Drawing.Size(293, 32);
             this.txtDienthoai.TabIndex = 10;
@@ -648,7 +650,7 @@
             // 
             this.picHinhanh.Image = global::QLNHANSU.Properties.Resources.del_Icon_x16;
             this.picHinhanh.Location = new System.Drawing.Point(67, 28);
-            this.picHinhanh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picHinhanh.Margin = new System.Windows.Forms.Padding(4);
             this.picHinhanh.Name = "picHinhanh";
             this.picHinhanh.Size = new System.Drawing.Size(234, 240);
             this.picHinhanh.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -659,7 +661,7 @@
             // 
             this.txtDiachi.Font = new System.Drawing.Font("Tahoma", 10F);
             this.txtDiachi.Location = new System.Drawing.Point(501, 278);
-            this.txtDiachi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtDiachi.Margin = new System.Windows.Forms.Padding(4);
             this.txtDiachi.Name = "txtDiachi";
             this.txtDiachi.Size = new System.Drawing.Size(778, 32);
             this.txtDiachi.TabIndex = 7;
@@ -691,7 +693,7 @@
             this.dtNgaysinh.CustomFormat = "dd/MM/yyyy";
             this.dtNgaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtNgaysinh.Location = new System.Drawing.Point(501, 179);
-            this.dtNgaysinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtNgaysinh.Margin = new System.Windows.Forms.Padding(4);
             this.dtNgaysinh.Name = "dtNgaysinh";
             this.dtNgaysinh.Size = new System.Drawing.Size(256, 27);
             this.dtNgaysinh.TabIndex = 4;
@@ -711,12 +713,22 @@
             // 
             this.chkGioitinh.AutoSize = true;
             this.chkGioitinh.Location = new System.Drawing.Point(501, 133);
-            this.chkGioitinh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkGioitinh.Margin = new System.Windows.Forms.Padding(4);
             this.chkGioitinh.Name = "chkGioitinh";
             this.chkGioitinh.Size = new System.Drawing.Size(68, 23);
             this.chkGioitinh.TabIndex = 2;
             this.chkGioitinh.Text = "Nam";
             this.chkGioitinh.UseVisualStyleBackColor = true;
+            // 
+            // DATHOIVIEC
+            // 
+            this.DATHOIVIEC.Caption = "Đã thôi việc";
+            this.DATHOIVIEC.FieldName = "DATHOIVIEC";
+            this.DATHOIVIEC.MinWidth = 30;
+            this.DATHOIVIEC.Name = "DATHOIVIEC";
+            this.DATHOIVIEC.Visible = true;
+            this.DATHOIVIEC.VisibleIndex = 11;
+            this.DATHOIVIEC.Width = 112;
             // 
             // frmNhanVien
             // 
@@ -730,7 +742,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmNhanVien";
             this.Text = "Nhân viên";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
@@ -806,5 +818,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn TenPB;
         private DevExpress.XtraGrid.Columns.GridColumn TenTD;
         private System.Windows.Forms.Button btnChonhinh;
+        private DevExpress.XtraGrid.Columns.GridColumn DATHOIVIEC;
     }
 }

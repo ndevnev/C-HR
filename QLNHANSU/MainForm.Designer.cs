@@ -41,11 +41,9 @@
             this.btnThoiViec = new DevExpress.XtraBars.BarButtonItem();
             this.btnLoaiCa = new DevExpress.XtraBars.BarButtonItem();
             this.btnLoaiCong = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
             this.btnDoiMatKhau = new DevExpress.XtraBars.BarButtonItem();
             this.btnSaoLuu = new DevExpress.XtraBars.BarButtonItem();
             this.btnPhucHoi = new DevExpress.XtraBars.BarButtonItem();
@@ -94,11 +92,9 @@
             this.btnThoiViec,
             this.btnLoaiCa,
             this.btnLoaiCong,
-            this.barButtonItem3,
             this.barButtonItem5,
             this.barButtonItem6,
             this.barButtonItem7,
-            this.barButtonItem8,
             this.btnDoiMatKhau,
             this.btnSaoLuu,
             this.btnPhucHoi,
@@ -207,14 +203,6 @@
             this.btnLoaiCong.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.btnLoaiCong.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnLoaiCong_ItemClick);
             // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "Phụ cấp";
-            this.barButtonItem3.Id = 14;
-            this.barButtonItem3.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem3.ImageOptions.SvgImage")));
-            this.barButtonItem3.Name = "barButtonItem3";
-            this.barButtonItem3.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
-            // 
             // barButtonItem5
             // 
             this.barButtonItem5.Caption = "Tăng ca";
@@ -239,14 +227,6 @@
             this.barButtonItem7.Name = "barButtonItem7";
             this.barButtonItem7.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             this.barButtonItem7.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem7_ItemClick);
-            // 
-            // barButtonItem8
-            // 
-            this.barButtonItem8.Caption = "Bảng lương";
-            this.barButtonItem8.Id = 18;
-            this.barButtonItem8.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("barButtonItem8.ImageOptions.SvgImage")));
-            this.barButtonItem8.Name = "barButtonItem8";
-            this.barButtonItem8.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonItemStyles.Large;
             // 
             // btnDoiMatKhau
             // 
@@ -399,13 +379,7 @@
             // 
             // grpQuanLyChamCong
             // 
-            this.grpQuanLyChamCong.ItemLinks.Add(this.btnLoaiCa, true);
-            this.grpQuanLyChamCong.ItemLinks.Add(this.btnLoaiCong, true);
-            this.grpQuanLyChamCong.ItemLinks.Add(this.barButtonItem3, true);
-            this.grpQuanLyChamCong.ItemLinks.Add(this.barButtonItem5, true);
-            this.grpQuanLyChamCong.ItemLinks.Add(this.barButtonItem6, true);
             this.grpQuanLyChamCong.ItemLinks.Add(this.barButtonItem7, true);
-            this.grpQuanLyChamCong.ItemLinks.Add(this.barButtonItem8, true);
             this.grpQuanLyChamCong.ItemLinks.Add(this.btnExit, true);
             this.grpQuanLyChamCong.Name = "grpQuanLyChamCong";
             this.grpQuanLyChamCong.Text = "Quản lý chấm công";
@@ -485,11 +459,9 @@
         private DevExpress.XtraBars.BarButtonItem btnThoiViec;
         private DevExpress.XtraBars.BarButtonItem btnLoaiCa;
         private DevExpress.XtraBars.BarButtonItem btnLoaiCong;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarButtonItem barButtonItem5;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
         private DevExpress.XtraBars.BarButtonItem btnDoiMatKhau;
         private DevExpress.XtraBars.BarButtonItem btnSaoLuu;
         private DevExpress.XtraBars.BarButtonItem btnPhucHoi;

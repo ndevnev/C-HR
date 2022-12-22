@@ -20,6 +20,7 @@ namespace DataLayer
         public Nullable<int> MANHANVIEN { get; set; }
         public Nullable<double> SOTIEN { get; set; }
         public string LYDO { get; set; }
+        public Nullable<int> MAKYCONG { get; set; }
     
         public virtual TB_NHANVIEN TB_NHANVIEN { get; set; }
     }

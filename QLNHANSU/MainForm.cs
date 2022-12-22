@@ -95,7 +95,9 @@ namespace QLNHANSU
 
         private void btnBangLuong_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            frmLuong.frmLuong f = new frmLuong.frmLuong();
+            f.MdiParent = this;
+            f.Show();
         }
 
         private void btnKhenThuong1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
